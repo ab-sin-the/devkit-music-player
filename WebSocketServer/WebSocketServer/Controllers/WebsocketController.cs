@@ -126,7 +126,7 @@
         private async Task OnBinaryMessageReceived(WebSocketHandler handler, string conversationId, string watermark, int musicId)
         {
             string fileName = musicId.ToString() +".wav";
-            Uri uri = new Uri(baseURL + fileName);
+            Uri uri = new Uri(baseURL + '/' + fileName);
             CloudFile file = new CloudFile(uri, storageCredentials);
             bool ifExist = await file.ExistsAsync();
             if (!ifExist)
