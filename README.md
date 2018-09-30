@@ -57,6 +57,8 @@ Please follow the steps below to deploy your Web Socket.
 
 5. Publish this project to a existing web service or a new web service.
 
+ *Note: Choose a locatoin near your network to ensure network speed*
+
 6. Turn on web socket option in the web service.
 
     ![socket_on](media/socket_on.png)
@@ -98,8 +100,9 @@ Please follow the steps below to deploy your Web Socket.
 
 There are three keywords available now:
 
-1. **Stop** Pause the music player.
+1. **Stop**: Pause the music player.
 
-2. **On** Resume the music player.
+2. **On**: Resume the music player.
 
-3. **Go** Skip to next song.
+3. **Go**: Skip to next song.
+
