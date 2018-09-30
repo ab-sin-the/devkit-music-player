@@ -44,7 +44,21 @@
 
         public WebsocketController()
         {
-            musicId = 1;
+            try
+            {
+
+                musicId = Count.count;
+                if (musicId == 0)
+                {
+                    Count.count = 1;
+                    musicId = 1;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(ex.ToString());
+            }
             // Setup bot client
         }
 
@@ -94,6 +108,7 @@
                 if (string.Equals(message, "next", StringComparison.OrdinalIgnoreCase))
                 {
                     musicId++;
+                    Count.count = musicId;
                     await OnBinaryMessageReceived(webSocketHandler, conversationId, watermark, musicId);
                 }
 
@@ -139,6 +154,7 @@
                 else
                 {
                     musicId = 1;
+                    Count.count = 1;
                     fileName = musicId.ToString() + ".wav";
                     uri = new Uri(baseURL + fileName);
                     file = new CloudFile(uri, storageCredentials);
@@ -162,5 +178,28 @@
             await handler.SendBinary(totalBytes, cts.Token);
         }
  
+    }
+}
+
+public static class Count
+{
+    /// <summary>
+    /// Global variable storing important stuff.
+    /// </summary>
+    static int musicId;
+
+    /// <summary>
+    /// Get or set the static important data.
+    /// </summary>
+    public static int count
+    {
+        get
+        {
+            return musicId;
+        }
+        set
+        {
+            musicId = value;
+        }
     }
 }
