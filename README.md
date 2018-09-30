@@ -104,5 +104,5 @@ There are three keywords available now:
 
 2. **On**: Resume the music player.
 
-3. **Go**: Skip to next song.
+3. **Go**: Skip to next song. (You can also skip to next song by pushing Button B)
 
