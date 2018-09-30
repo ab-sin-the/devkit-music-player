@@ -203,8 +203,7 @@ void doWork() {
                     playComplete = false;
                     break;
                 } 
-                //else if (incomingByte == JUMP_WORD_IDX) {
-                 else if (digitalRead(USER_BUTTON_B) == LOW) {
+                else if ((incomingByte == JUMP_WORD_IDX) || (digitalRead(USER_BUTTON_B) == LOW)) {
                      do {
                      } while (digitalRead(USER_BUTTON_B) == LOW);
                     stop();
