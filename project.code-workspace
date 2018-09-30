@@ -1,0 +1,14 @@
+{
+    "folders": [
+        {
+            "path": "Device"
+        },
+        {
+            "path": "WebSocketServer"
+        }
+    ],
+    "settings": {
+        "IoTWorkbench.BoardId": "devkit",
+        "IoTWorkbench.DevicePath": "Device"
+    }
+}
