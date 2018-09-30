@@ -9,7 +9,10 @@ In this project, we use two Devkits to build a music player. This two Devkits ar
 3. `git clone https://github.com/ab-sin-the/devkit-music-player` 
 4. `cd devkit-music-player`
 
-## Step 1: Upload the sketch file in VoiceRecorder to one of Devkits.
+## Step 1: Upload the sketch file in VoiceRecorder folder to one of Devkits.
+
+Since IoT workbench currently does not support dealing with two devices
+at the same time. One device has to be uploaded first.
 
 ## Step 2: Create Storage Account
 1. Log in to the [Azure portal](http://portal.azure.com/).
@@ -75,14 +78,18 @@ Please follow the steps below to deploy your Web Socket.
 
 ## Play with Devkit Music Player
 
-1. Press **Reset** button on the DevKit to restart your device application.
+1. Press **Reset** button on the first DevKit to restart your device application.
 
-    *Note: Please ensure your DevKit is connected to Wi-Fi.*
+    *Note: Please ensure the DevKit is connected to Wi-Fi.*
 
-2. After the DevKit connect to Wi-Fi successfully, press button A to start a convercation.
+2. After the DevKit connect to Wi-Fi successfully, press button A to start the music player.
 
-3. Hold down button B to talk, and release button B when you finish your voice command.
+3. Press **Reset** button on the second DevKit to restart the voice recorder.
 
-4. Wait a few seconds for service to process the voice command.
+4. Connect the two Devkits via Serial.
 
-5. The DevKit will play back the response audio via the headphone output on your DevKit. You can hear the audio via headphone connected to it.
+5. Press button A on the second Devkit and you can control the music player via voice now.
+
+    *Note: Do not connect two devkits until you have pressed button A of the first devkits.*
+
+    ![connect-devkits](media/devkit-connect.jpg)

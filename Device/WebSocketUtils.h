@@ -2,7 +2,7 @@
 #define WEBSOCKET_UTILS
 #include "Arduino.h"
 
-static char *webAppUrl = "";
+static char *webAppUrl = "ws://[web-app-name].azurewebsites.net";
 WebSocketClient *wsClient = NULL;
 bool isWsConnected = false;
 char websocketBuffer[4096];
