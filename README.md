@@ -11,7 +11,7 @@ In this project, we use two Devkits to build a music player. This two Devkits ar
 
 ## Step 1: Upload the sketch file in VoiceRecorder folder to one of Devkits.
 
-Since IoT workbench currently does not support dealing with two devices
+Since IoT Workbench currently does not support dealing with two devices
 at the same time. One device has to be uploaded first.
 
 ## Step 2: Create Storage Account
@@ -69,7 +69,7 @@ Please follow the steps below to deploy your Web Socket.
 
 3. Open **WebSocketUtils.h**. Find and replace `[web-app-name]` with the Azure Web App name you've create in Step 3.
 
-    ![replace-web-app-name](media/replace-web-app-name.png)
+    ![replace-web-app-name](media/replace-app-name.png)
 
 4. Use IoT Workbench extension or Arduino extension to build and upload the code to the DevKit.
 
@@ -93,3 +93,13 @@ Please follow the steps below to deploy your Web Socket.
     *Note: Do not connect two devkits until you have pressed button A of the first devkits.*
 
     ![connect-devkits](media/devkit-connect.jpg)
+
+### Command
+
+There are three keywords available now:
+
+1. **Stop** Pause the music player.
+
+2. **On** Resume the music player.
+
+3. **Go** Skip to next song.

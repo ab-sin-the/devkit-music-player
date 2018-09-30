@@ -53,9 +53,9 @@ static int dropped_frames = 0;
 static float featurizer_output_buffer[FEATURIZER_OUTPUT_SIZE]; // 40 channels
 static float classifier_output_buffer[CLASSIFIER_OUTPUT_SIZE]; // 31 classes
 
-const float PREDICT_PROB_THRESHOLD_ON = 0.80;
-const float PREDICT_PROB_THRESHOLD_STOP = 0.75;
-const float PREDICT_PROB_THRESHOLD_GO = 0.80;
+const float PREDICT_PROB_THRESHOLD_ON = 0.90;
+const float PREDICT_PROB_THRESHOLD_STOP = 0.85;
+const float PREDICT_PROB_THRESHOLD_GO = 0.90;
 
 #define SMOOTHING 0
 #if SMOOTHING
